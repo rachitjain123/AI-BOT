@@ -14,7 +14,7 @@ class bot:
         self.blk_won_p = 0 # how many blocks won by player
         self.blk_won_o = 0 # how many blocks won by opponent
         self.is_bonus = 0
-        self.Util_Matrix = [[1,0,0,0,0],[3,0,0,27,0],[9,0,0,0,0],[27,0,0,0,0],[81,0,0,0,0]]
+        self.Util_Matrix = [[1,0,0,0,0],[3,0,0,0,0],[9,0,0,0,0],[27,0,0,0,0],[81,0,0,0,0]]
 
     def getBlockStatus(self,block):
         row_pos = [[0,0],[0,1],[0,2],[0,3]] #initial row index
