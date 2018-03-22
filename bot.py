@@ -197,7 +197,6 @@ class bot:
         cnt1 = sum(blocks.count(self.player_symbol) for blocks in board.block_status)
         cnt2 = sum(blocks.count(self.opponent_symbol) for blocks in board.block_status)
         if self.blk_won_p < cnt1 and self.is_bonus == 1:
-            print "inside bonus move"
             return self.infinity
        
         return sum(boardScore)
@@ -253,9 +252,7 @@ class bot:
                 self.is_bonus =i 
                 uselessScore,best_move, retDepth = self.ab_minmax(temp_board, formattedBoard,formattedBlockStatus,-100000000000000000,100000000000000000, self.player_symbol, old_move, depth)
                 if (time() - self.startTime) < self.timeLimit:
-                    print i, best_move, uselessScore
                     if uselessScore == self.infinity and depth == 1:
-                        print "sdfsd"
                         nextMove = best_move
                         break
                     else:
